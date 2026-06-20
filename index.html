@@ -13,6 +13,259 @@
             background-size: cover;
             background-position: center;
         }
+        .overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero{
+
+    text-align:center;
+    color:white;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    max-width:700px;
+
+    animation:fade 1.5s ease;
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+    margin-bottom:15px;
+}
+
+.hero h2{
+
+    font-size:28px;
+
+    font-weight:300;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin-bottom:45px;
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    transition:.3s;
+}
+
+.button:hover{
+
+    background:white;
+
+    color:black;
+}
+.chat-button{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:70px;
+
+height:70px;
+
+background:#4B7F52;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+cursor:pointer;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+transition:.3s;
+
+z-index:1000;
+
+}
+
+.chat-button:hover{
+
+transform:scale(1.08);
+
+}
+
+.chat-window{
+
+display:none;
+
+position:fixed;
+
+bottom:110px;
+
+right:25px;
+
+width:340px;
+
+background:white;
+
+border-radius:18px;
+
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+overflow:hidden;
+
+font-family:Arial;
+
+z-index:999;
+
+animation:fade .3s;
+
+}
+
+.chat-header{
+
+background:#4B7F52;
+
+color:white;
+
+padding:18px;
+
+font-size:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.chat-header span{
+
+cursor:pointer;
+
+font-size:22px;
+
+}
+
+.chat-body{
+
+padding:20px;
+
+}
+
+.chat-body input,
+
+.chat-body textarea{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:12px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:15px;
+
+box-sizing:border-box;
+
+}
+
+.chat-body textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+.chat-body button{
+
+width:100%;
+
+padding:14px;
+
+background:#4B7F52;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+.chat-body button:hover{
+
+background:#365d3d;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
     </style>
 <title>Agrologic | Agricultural Innovation Cyprus</title>
 
@@ -31,16 +284,76 @@
     
 </head>
 <body>
-<main>
-  <h1 style="display:none;">Agrologic | Aloe Vera Farming and Skincare Solutions in Cyprus</h1>
+<body>
 
-  <p style="display:none;">
-    Agrologic specializes in innovative agricultural solutions with a focus on Aloe Vera farming in Cyprus. 
-    We provide expertise in sustainable Aloe cultivation, agronomic consulting, and high-quality Aloe products 
-    for skincare and cosmetics. Explore Aloe Vera benefits for skin, natural cosmetic formulations, and 
-    modern farming practices to maximize yield and quality. Precision agriculture, Aloe cosmetics, Aloe 
-    farming techniques, and sustainable farming Cyprus.
-  </p>
-</main>
+<body>
+
+<div class="overlay">
+
+    <div class="hero">
+
+        <h1>agrologic</h1>
+
+        <h2>Innovation in Agriculture</h2>
+
+        <a href="#" class="button">
+            greenhub by agrologic
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Chat Button -->
+
+<div class="chat-button" onclick="openChat()">
+💬
+</div>
+
+<!-- Chat Window -->
+
+<div id="chatWindow" class="chat-window">
+
+<div class="chat-header">
+
+Chat with us
+
+<span onclick="closeChat()">✕</span>
+
+</div>
+
+<div class="chat-body">
+
+<input type="text" placeholder="Your name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openChat(){
+
+document.getElementById("chatWindow").style.display="block";
+
+}
+
+function closeChat(){
+
+document.getElementById("chatWindow").style.display="none";
+
+}
+
+</script>
+
+</body>
+
+</body>
 </body>
 </html>
