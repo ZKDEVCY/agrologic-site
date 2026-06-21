@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Greenhub | Plants First</title>
+  <meta name="description" content="Greenhub is a plant-first social network where plants have profiles and people act as caretakers." />
+
+  <link rel="stylesheet" href="greenhub.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="./">
+        <span class="brand-icon">🌿</span>
+        <span>greenhub</span>
+      </a>
+
+      <nav class="side-nav">
+        <button class="active" data-page="home">Home</button>
+        <button data-page="plants">My Plants</button>
+        <button data-page="plant-profile">Plant Profile</button>
+        <button data-page="communities">Communities</button>
+        <button data-page="marketplace">Marketplace</button>
+        <button data-page="ai">Plant AI</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="small-label">Core rule</p>
+        <h3>Plants are the profiles.</h3>
+        <p>People are caretakers. Every plant can build followers, history, and identity.</p>
+      </div>
+
+      <a class="back-link" href="../">← Back to Agrologic</a>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="small-label">Greenhub v0.3</p>
+          <h1 id="pageTitle">Plant-first home feed</h1>
+          <p id="pageSubtitle">Follow plants, gardens, collections, and their caretakers.</p>
+        </div>
+
+        <button class="create-button" id="openPlantModal">+ Create plant profile</button>
+      </header>
+
+      <section id="home" class="page active">
+        <section class="hero-panel">
+          <div>
+            <p class="small-label">Product direction</p>
+            <h2>The social network where plants have profiles.</h2>
+            <p>Each plant has a digital identity: species, caretaker, growth timeline, health status, posts, followers, and future AI diagnosis.</p>
+          </div>
+
+          <div class="hero-stats">
+            <div><strong>128</strong><span>plant profiles</span></div>
+            <div><strong>34</strong><span>caretakers</span></div>
+            <div><strong>12</strong><span>communities</span></div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="feed" id="feed"></div>
+
+          <aside class="right-panel">
+            <section class="panel-card">
+              <p class="small-label">Plant of the day</p>
+              <h3>Monstera Deliciosa #08</h3>
+              <p>Strong new leaf development. 421 followers watching its growth timeline.</p>
+            </section>
+
+            <section class="panel-card">
+              <p class="small-label">Plant-only identity</p>
+              <ul>
+                <li>Profile photos must be plants.</li>
+                <li>Uploads are plant-focused.</li>
+                <li>AI verification comes later.</li>
+                <li>Humans manage plant profiles as caretakers.</li>
+              </ul>
+            </section>
+
+            <section class="panel-card dark">
+              <p class="small-label">Tonight's milestone</p>
+              <h3>A real interface.</h3>
+              <p>This is now the base product UI. Next, we connect real data and authentication.</p>
+            </section>
+          </aside>
+        </section>
+      </section>
+
+      <section id="plants" class="page">
+        <div class="grid-list">
+          <article class="feature-card"><h3>Aloe Vera #01</h3><p>Healthy · Aloe vera · Caretaker: Zacharias</p><button data-page-jump="plant-profile">View profile</button></article>
+          <article class="feature-card"><h3>Grandma’s Rose</h3><p>Flowering · Rosa spp. · Caretaker: Maria</p><button data-page-jump="plant-profile">View profile</button></article>
+          <article class="feature-card"><h3>Cherry Tomato Bed</h3><p>Fruit set · Solanum lycopersicum · Caretaker: Andreas</p><button data-page-jump="plant-profile">View profile</button></article>
+        </div>
+      </section>
+
+      <section id="plant-profile" class="page">
+        <div class="plant-profile-layout">
+          <section class="plant-hero-card">
+            <div class="plant-portrait">🌱</div>
+            <div>
+              <p class="small-label">Plant profile</p>
+              <h2>Aloe Vera #01</h2>
+              <p>Aloe vera barbadensis Miller · Caretaker: Zacharias · Larnaca, Cyprus</p>
+              <div class="post-tags">
+                <span>Healthy</span>
+                <span>3 years old</span>
+                <span>Outdoor</span>
+                <span>Low water demand</span>
+              </div>
+              <button class="create-button">Follow plant</button>
+            </div>
+          </section>
+
+          <section class="timeline">
+            <article><strong>Today</strong><p>New growth visible. Leaf color stable.</p></article>
+            <article><strong>Last week</strong><p>Irrigation cycle reduced due to cooler evening temperatures.</p></article>
+            <article><strong>Last month</strong><p>Offsets observed near the base. Possible propagation candidate.</p></article>
+          </section>
+        </div>
+      </section>
+
+      <section id="communities" class="page">
+        <div class="grid-list">
+          <article class="feature-card"><h3>Houseplant Lovers</h3><p>12.4k members discussing indoor plants and plant care.</p><button>Join</button></article>
+          <article class="feature-card"><h3>Organic Gardeners</h3><p>8.7k members focused on compost, soil, and biological care.</p><button>Join</button></article>
+          <article class="feature-card"><h3>Plant Parents Cyprus</h3><p>Local Mediterranean plant community.</p><button>Join</button></article>
+        </div>
+      </section>
+
+      <section id="marketplace" class="page">
+        <div class="grid-list">
+          <article class="feature-card product"><div class="product-img">🪴</div><h3>Monstera Deliciosa</h3><p>€25 · Local pickup</p><button>View listing</button></article>
+          <article class="feature-card product"><div class="product-img">🌵</div><h3>Cactus Collection</h3><p>€18 · 5 plants</p><button>View listing</button></article>
+          <article class="feature-card product"><div class="product-img">🌿</div><h3>Aloe Vera Offsets</h3><p>€4 each · Larnaca</p><button>View listing</button></article>
+        </div>
+      </section>
+
+      <section id="ai" class="page">
+        <div class="ai-panel">
+          <p class="small-label">Future AI engine</p>
+          <h2>Plant-only upload verification</h2>
+          <p>In the real platform, AI checks every uploaded image. If the photo is not plant-related, it is rejected before publishing.</p>
+          <div class="ai-status">Demo status: AI moderation concept ready. Backend integration comes later.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="plantModal">
+    <div class="modal">
+      <button class="close-modal" id="closePlantModal">×</button>
+      <p class="small-label">Prototype form</p>
+      <h2>Create plant profile</h2>
+
+      <form id="plantForm">
+        <label>Plant name<input id="plantName" type="text" placeholder="Example: Aloe Vera #01" required /></label>
+        <label>Species<input id="plantSpecies" type="text" placeholder="Example: Aloe vera barbadensis Miller" required /></label>
+        <label>Health status<select id="plantHealth"><option>Healthy</option><option>Needs attention</option><option>Recovering</option><option>Disease suspected</option></select></label>
+        <label>Plant photo<input type="file" accept="image/*" /></label>
+        <div class="ai-status">AI plant check: demo mode. Real validation requires backend AI.</div>
+        <label>Care note<textarea id="plantNote" placeholder="Write a short note about this plant..."></textarea></label>
+        <button type="submit" class="create-button full">Save plant profile</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="greenhub.js"></script>
+</body>
+</html>
