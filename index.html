@@ -1,264 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>agrologic | Innovation in Agriculture</title>
-  <meta name="description" content="Agrologic | Innovation in Agriculture. Enter Greenhub by Agrologic." />
-
   <style>
-    :root {
-      --green: #31543a;
-      --green-dark: #0f1d12;
-      --white: #ffffff;
-      --soft-white: rgba(255,255,255,.88);
-      --glass: rgba(10, 20, 12, .42);
-    }
-
     * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
       margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      color: var(--white);
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background:
-        linear-gradient(rgba(0, 0, 0, .22), rgba(0, 0, 0, .28)),
-        url("photo.jpg") center center / cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
       overflow: hidden;
+      background: #1f3d2b;
     }
 
-    .site-brand {
+    .background-photo {
       position: fixed;
-      top: 34px;
-      left: 38px;
-      z-index: 5;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
     }
 
-    .site-brand h1 {
-      margin: 0;
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -1.6px;
-      text-transform: lowercase;
-      text-shadow: 0 3px 16px rgba(0,0,0,.35);
-    }
-
-    .site-brand p {
-      margin: 8px 0 0;
-      font-size: clamp(13px, 2vw, 17px);
-      font-weight: 600;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: var(--soft-white);
-      text-shadow: 0 3px 16px rgba(0,0,0,.35);
-    }
-
-    .entry {
+    .background-overlay {
       position: fixed;
-      left: 50%;
-      bottom: 10vh;
-      transform: translateX(-50%);
-      z-index: 5;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    .landing-content {
       text-align: center;
+      padding: 24px;
+    }
+
+    .brand-name {
+      font-size: clamp(3rem, 9vw, 7rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+      font-weight: 300;
+      margin-bottom: 40px;
     }
 
     .greenhub-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: min(520px, calc(100vw - 40px));
-      min-height: 72px;
-      padding: 18px 36px;
+      display: inline-block;
+      min-width: 280px;
+      padding: 16px 36px;
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.42);
-      background: rgba(20, 52, 30, .78);
-      backdrop-filter: blur(14px);
       color: white;
       text-decoration: none;
-      font-size: clamp(20px, 4vw, 36px);
-      font-weight: 600;
-      letter-spacing: -1px;
-      box-shadow: 0 18px 52px rgba(0,0,0,.34);
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
     }
 
     .greenhub-button:hover {
-      transform: translateY(-3px);
-      background: rgba(32, 78, 43, .88);
-      box-shadow: 0 24px 70px rgba(0,0,0,.42);
-    }
-
-    .chat-widget {
-      position: fixed;
-      right: 28px;
-      bottom: 28px;
-      z-index: 10;
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-2px);
     }
 
     .chat-button {
-      width: 62px;
-      height: 62px;
-      border: 0;
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: rgba(20, 52, 30, .86);
+      border: none;
+      background: rgba(28, 91, 57, 0.95);
       color: white;
       font-size: 26px;
       cursor: pointer;
-      box-shadow: 0 16px 42px rgba(0,0,0,.32);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    .chat-panel {
-      position: absolute;
-      right: 0;
-      bottom: 78px;
-      width: min(340px, calc(100vw - 40px));
-      padding: 20px;
-      border-radius: 24px;
-      background: rgba(15, 29, 18, .88);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 20px 60px rgba(0,0,0,.42);
-      border: 1px solid rgba(255,255,255,.16);
+    .chat-popup {
       display: none;
-    }
-
-    .chat-panel.open {
-      display: block;
-    }
-
-    .chat-panel h2 {
-      margin: 0 0 8px;
-      font-size: 22px;
-      letter-spacing: -.6px;
-    }
-
-    .chat-panel p {
-      margin: 0 0 16px;
-      color: rgba(255,255,255,.74);
-      line-height: 1.45;
-      font-size: 14px;
-    }
-
-    .chat-panel form {
-      display: grid;
-      gap: 10px;
-    }
-
-    .chat-panel input,
-    .chat-panel textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 14px;
-      background: rgba(255,255,255,.10);
-      color: white;
-      padding: 12px 13px;
-      font-family: inherit;
-      outline: none;
-    }
-
-    .chat-panel textarea {
-      min-height: 94px;
-      resize: vertical;
-    }
-
-    .chat-panel input::placeholder,
-    .chat-panel textarea::placeholder {
-      color: rgba(255,255,255,.52);
-    }
-
-    .chat-panel button[type="submit"] {
-      border: 0;
-      border-radius: 999px;
-      min-height: 44px;
+      position: fixed;
+      right: 24px;
+      bottom: 94px;
+      max-width: 280px;
+      padding: 18px;
+      border-radius: 18px;
       background: white;
-      color: var(--green-dark);
-      font-weight: 600;
-      cursor: pointer;
+      color: #1f3d2b;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
-    .chat-note {
-      margin-top: 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,.56);
-    }
-
-    @media (max-width: 720px) {
-      body {
-        overflow: auto;
-      }
-
-      .site-brand {
-        top: 24px;
-        left: 24px;
-        right: 24px;
-      }
-
-      .entry {
-        bottom: 116px;
-      }
-
-      .chat-widget {
-        right: 20px;
-        bottom: 20px;
-      }
+    .chat-popup.active {
+      display: block;
     }
   </style>
 </head>
-
 <body>
-  <header class="site-brand">
-    <h1>agrologic</h1>
-    <p>Innovation in Agriculture</p>
-  </header>
+  <!-- Keep your existing aloe vera photo in the project folder.
+       Recommended file name: aloe-field.jpg -->
+  <img id="backgroundPhoto" class="background-photo" src="aloe-field.jpg" alt="Aloe vera field background" />
+  <div class="background-overlay"></div>
 
-  <main class="entry">
-    <a class="greenhub-button" href="./greenhub/">greenhub by agrologic</a>
+  <main class="landing-content">
+    <h1 class="brand-name">agrologic</h1>
+    <p class="tagline">Innovation in Agriculture</p>
+    <a class="greenhub-button" href="login.html">greenhub by agrologic</a>
   </main>
 
-  <div class="chat-widget">
-    <div class="chat-panel" id="chatPanel">
-      <h2>Chat with us</h2>
-      <p>Send a message to Agrologic. Live chat and email routing will be connected in a later stage.</p>
-
-      <form id="chatForm">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send message</button>
-      </form>
-
-      <div class="chat-note">
-        Reminder: connect future form routing to agrologic.cy@gmail.com.
-      </div>
-    </div>
-
-    <button class="chat-button" id="chatButton" aria-label="Open chat">💬</button>
+  <div id="chatPopup" class="chat-popup">
+    Your Agrologic assistant will be available soon.
   </div>
 
+  <button class="chat-button" onclick="toggleChat()">💬</button>
+
   <script>
-    const chatButton = document.getElementById("chatButton");
-    const chatPanel = document.getElementById("chatPanel");
-    const chatForm = document.getElementById("chatForm");
+    function toggleChat() {
+      document.getElementById("chatPopup").classList.toggle("active");
+    }
 
-    chatButton.addEventListener("click", () => {
-      chatPanel.classList.toggle("open");
-    });
+    // This keeps the aloe background working even if your existing file has a slightly different name/path.
+    const backgroundPhoto = document.getElementById("backgroundPhoto");
+    const possibleBackgrounds = [
+      "aloe-field.jpg",
+      "aloe-vera-field.jpg",
+      "aloe.jpg",
+      "images/aloe-field.jpg",
+      "images/aloe-vera-field.jpg",
+      "images/aloe.jpg",
+      "assets/aloe-field.jpg",
+      "assets/aloe-vera-field.jpg",
+      "assets/aloe.jpg"
+    ];
 
-    chatForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      alert("Demo only: the contact form is ready visually. Email routing will be connected later.");
-      chatForm.reset();
-      chatPanel.classList.remove("open");
-    });
+    let backgroundIndex = 0;
+    backgroundPhoto.onerror = function () {
+      backgroundIndex++;
+      if (backgroundIndex < possibleBackgrounds.length) {
+        backgroundPhoto.src = possibleBackgrounds[backgroundIndex];
+      }
+    };
   </script>
 </body>
 </html>

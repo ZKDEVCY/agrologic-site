@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>greenhub sign in</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <h1>greenhub</h1>
+      <p class="subtitle">Welcome Back</p>
+
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+        <p id="errorMessage" class="error-message"></p>
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <a class="forgot-link" href="#">Forgot Password?</a>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
