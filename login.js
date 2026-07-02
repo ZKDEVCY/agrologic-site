@@ -1,19 +1,19 @@
 const loginForm = document.getElementById("loginForm");
-const errorMessage = document.getElementById("errorMessage");
+const loginMessage = document.getElementById("loginMessage");
 
-const validUsername = "admin";
-const validPassword = "greenhub123";
+const validUsername = "zacharias";
+const validPassword = "greenhub";
 
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const username = document.getElementById("username").value.trim();
+  const username = document.getElementById("username").value.trim().toLowerCase();
   const password = document.getElementById("password").value.trim();
 
   if (username === validUsername && password === validPassword) {
-    sessionStorage.setItem("greenhubLoggedIn", "true");
+    localStorage.setItem("greenhubLoggedIn", "true");
     window.location.href = "greenhub/index.html";
   } else {
-    errorMessage.textContent = "Incorrect username or password.";
+    loginMessage.textContent = "Incorrect username or password.";
   }
 });

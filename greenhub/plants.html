@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Plants</title>
+  <link rel="stylesheet" href="greenhub.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">greenhub</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plants.html">My Plants</a>
+      <button id="logoutButton">Logout</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="section-header">
+      <div>
+        <p class="eyebrow">plant care dashboard</p>
+        <h1>My Plants</h1>
+        <p>First functional GreenHub module.</p>
+      </div>
+      <button class="primary-action">+ Add Plant</button>
+    </section>
+
+    <section class="plant-grid">
+      <article class="plant-card">
+        <div class="plant-avatar">🌱</div>
+        <div>
+          <p class="status healthy">Healthy</p>
+          <h2>Aloe Vera #001</h2>
+          <p>Aloe vera barbadensis Miller</p>
+        </div>
+        <div class="plant-data">
+          <span>Last watered: 2 days ago</span>
+          <span>Location: Larnaca</span>
+          <span>Module: Care profile</span>
+        </div>
+        <a class="secondary-button" href="plant-profile.html">Open Profile</a>
+      </article>
+    </section>
+  </main>
+
+  <script src="greenhub.js"></script>
+</body>
+</html>

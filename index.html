@@ -3,159 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>agrologic | Innovation in Agriculture</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      overflow: hidden;
-      background: #1f3d2b;
-    }
-
-    .background-photo {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-
-    .background-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.35);
-      z-index: -1;
-    }
-
-    .landing-content {
-      text-align: center;
-      padding: 24px;
-    }
-
-    .brand-name {
-      font-size: clamp(3rem, 9vw, 7rem);
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-      margin-bottom: 16px;
-    }
-
-    .tagline {
-      font-size: clamp(1.1rem, 2.5vw, 1.7rem);
-      font-weight: 300;
-      margin-bottom: 40px;
-    }
-
-    .greenhub-button {
-      display: inline-block;
-      min-width: 280px;
-      padding: 16px 36px;
-      border: 1px solid rgba(255, 255, 255, 0.85);
-      border-radius: 999px;
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(6px);
-      transition: all 0.25s ease;
-    }
-
-    .greenhub-button:hover {
-      background: rgba(255, 255, 255, 0.22);
-      transform: translateY(-2px);
-    }
-
-    .chat-button {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(28, 91, 57, 0.95);
-      color: white;
-      font-size: 26px;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .chat-popup {
-      display: none;
-      position: fixed;
-      right: 24px;
-      bottom: 94px;
-      max-width: 280px;
-      padding: 18px;
-      border-radius: 18px;
-      background: white;
-      color: #1f3d2b;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    .chat-popup.active {
-      display: block;
-    }
-  </style>
+  <title>agrologic</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <!-- Keep your existing aloe vera photo in the project folder.
-       Recommended file name: aloe-field.jpg -->
-  <img id="backgroundPhoto" class="background-photo" src="aloe-field.jpg" alt="Aloe vera field background" />
-  <div class="background-overlay"></div>
-
-  <main class="landing-content">
-    <h1 class="brand-name">agrologic</h1>
-    <p class="tagline">Innovation in Agriculture</p>
-    <a class="greenhub-button" href="login.html">greenhub by agrologic</a>
+<body class="landing-page">
+  <main class="landing-overlay">
+    <section class="hero-card">
+      <h1>agrologic</h1>
+      <p>Innovation in Agriculture</p>
+      <a class="main-button" href="login.html">greenhub by agrologic</a>
+    </section>
   </main>
 
-  <div id="chatPopup" class="chat-popup">
-    Your Agrologic assistant will be available soon.
+  <button class="chat-button" aria-label="Open chat">💬</button>
+  <div class="chat-popup" id="chatPopup">
+    <strong>Welcome</strong>
+    <p>Your agrologicAI assistant is ready to help!</p>
   </div>
 
-  <button class="chat-button" onclick="toggleChat()">💬</button>
-
-  <script>
-    function toggleChat() {
-      document.getElementById("chatPopup").classList.toggle("active");
-    }
-
-    // This keeps the aloe background working even if your existing file has a slightly different name/path.
-    const backgroundPhoto = document.getElementById("backgroundPhoto");
-    const possibleBackgrounds = [
-      "aloe-field.jpg",
-      "aloe-vera-field.jpg",
-      "aloe.jpg",
-      "images/aloe-field.jpg",
-      "images/aloe-vera-field.jpg",
-      "images/aloe.jpg",
-      "assets/aloe-field.jpg",
-      "assets/aloe-vera-field.jpg",
-      "assets/aloe.jpg"
-    ];
-
-    let backgroundIndex = 0;
-    backgroundPhoto.onerror = function () {
-      backgroundIndex++;
-      if (backgroundIndex < possibleBackgrounds.length) {
-        backgroundPhoto.src = possibleBackgrounds[backgroundIndex];
-      }
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

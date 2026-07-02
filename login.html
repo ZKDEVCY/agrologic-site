@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>greenhub sign in</title>
-  <link rel="stylesheet" href="login.css" />
+  <title>greenhub login</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <main class="login-page">
+<body class="login-page">
+  <main class="login-wrapper">
     <section class="login-card">
-      <h1>greenhub</h1>
-      <p class="subtitle">Welcome Back</p>
+      <p class="eyebrow">greenhub by agrologic</p>
+      <h1>Sign in</h1>
+      <p class="login-note">Access your agricultural workspace.</p>
 
       <form id="loginForm">
         <label for="username">Username</label>
@@ -19,12 +20,11 @@
         <label for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="current-password" required />
 
-        <p id="errorMessage" class="error-message"></p>
-
-        <button type="submit">Sign In</button>
+        <p id="loginMessage" class="login-message"></p>
+        <button type="submit" class="main-button full-width">Enter greenhub</button>
       </form>
 
-      <a class="forgot-link" href="#">Forgot Password?</a>
+      <a class="back-link" href="index.html">← Back to agrologic</a>
     </section>
   </main>
 
