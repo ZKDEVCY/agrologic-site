@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>greenhub AR Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="ar-page">
+  <header class="greenhub-header">
+    <a class="brand" href="greenhub.html">greenhub</a>
+    <nav>
+      <a href="greenhub.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="ar-layout">
+    <section class="ar-controls">
+      <h1>AR Preview</h1>
+      <label for="plantSelect">Select plant</label>
+      <select id="plantSelect">
+        <option value="">Choose plant</option>
+        <option value="plant1">Plant1 — W 20 cm / H 70 cm</option>
+      </select>
+      <p class="small-note">After selecting Plant1, allow camera access. The plant appears at 60% opacity.</p>
+      <button id="captureButton" disabled>Take photo with product</button>
+      <a id="downloadLink" class="secondary-button hidden" download="greenhub-plant1-preview.png">Save photo</a>
+    </section>
+
+    <section class="camera-stage" id="cameraStage">
+      <video id="cameraVideo" autoplay playsinline muted></video>
+      <img id="plantOverlay" src="assets/plant1.png" alt="Plant1 AR preview" />
+      <div class="camera-placeholder" id="cameraPlaceholder">Select Plant1 to open the camera.</div>
+    </section>
+
+    <canvas id="captureCanvas" class="hidden"></canvas>
+  </main>
+
+  <script src="ar-preview.js"></script>
+</body>
+</html>

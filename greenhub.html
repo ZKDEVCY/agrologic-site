@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>greenhub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="greenhub-page">
+  <header class="greenhub-header">
+    <a class="brand" href="greenhub.html">greenhub</a>
+    <nav>
+      <a href="#feed">Feed</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#marketplace">Marketplace</a>
+      <a href="ar-preview.html" class="nav-highlight">AR Preview</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero-panel">
+      <h1>Welcome to greenhub</h1>
+      <p>Plant profiles, community posts, marketplace listings and AR plant preview by agrologic.</p>
+      <a class="primary-button" href="ar-preview.html">Open AR Preview</a>
+    </section>
+
+    <section class="grid-panels">
+      <article id="feed" class="panel">
+        <h2>Feed</h2>
+        <p>Share and explore plant photos only.</p>
+      </article>
+      <article id="profiles" class="panel">
+        <h2>Plant profiles</h2>
+        <p>Create plant identities and track their development.</p>
+      </article>
+      <article id="marketplace" class="panel">
+        <h2>Marketplace</h2>
+        <p>List plants with seller details and plant passport information.</p>
+      </article>
+      <article class="panel clickable-panel" onclick="window.location.href='ar-preview.html'">
+        <h2>AR Preview</h2>
+        <p>Open the camera and preview Plant1 in your own space.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

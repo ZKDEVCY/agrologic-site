@@ -4,24 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>agrologic</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="landing-page">
   <main class="landing-overlay">
-    <section class="hero-card">
+    <section class="landing-card">
       <h1>agrologic</h1>
       <p>Innovation in Agriculture</p>
-      <a class="main-button" href="login.html">greenhub by agrologic</a>
+      <a class="primary-button" href="login.html">greenhub by agrologic</a>
     </section>
   </main>
 
-  <button class="chat-button" aria-label="Open chat">💬</button>
-  <div class="chat-popup" id="chatPopup">
-    <strong>Welcome</strong>
-    <p>Your agrologicAI assistant is ready to help!</p>
-  </div>
+  <button class="chat-button" id="chatButton" aria-label="Open chat">💬</button>
+  <section class="chat-box" id="chatBox" aria-hidden="true">
+    <h2>Chat with us</h2>
+    <input type="text" placeholder="Name" />
+    <input type="email" placeholder="Email" />
+    <textarea placeholder="Message"></textarea>
+    <button>Send</button>
+  </section>
 
-  <script src="script.js"></script>
+  <script>
+    const chatButton = document.getElementById('chatButton');
+    const chatBox = document.getElementById('chatBox');
+    chatButton.addEventListener('click', () => {
+      chatBox.classList.toggle('open');
+      chatBox.setAttribute('aria-hidden', !chatBox.classList.contains('open'));
+    });
+  </script>
 </body>
 </html>
-<!-- GreenHub v0.6 deployment retry -->
