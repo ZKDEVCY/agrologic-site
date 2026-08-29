@@ -3,7 +3,11 @@ const video = document.getElementById('cameraVideo');
 const plantOverlay = document.getElementById('plantOverlay');
 const placeholder = document.getElementById('cameraPlaceholder');
 const captureButton = document.getElementById('captureButton');
-const downloadLink = document.getElementById('downloadLink');
+const captureResult = document.getElementById('captureResult');
+const capturedImage = document.getElementById('capturedImage');
+const shareButton = document.getElementById('shareButton');
+const desktopDownloadLink = document.getElementById('desktopDownloadLink');
+const saveNote = document.getElementById('saveNote');
 const canvas = document.getElementById('captureCanvas');
 const sizeSlider = document.getElementById('sizeSlider');
 const smallerButton = document.getElementById('smallerButton');
@@ -244,6 +248,16 @@ function clearPointer(event) {
 plantOverlay.addEventListener('pointerup', clearPointer);
 plantOverlay.addEventListener('pointercancel', clearPointer);
 
+let capturedBlob = null;
+let capturedObjectUrl = null;
+
+function revokeCapturedObjectUrl() {
+  if (capturedObjectUrl) {
+    URL.revokeObjectURL(capturedObjectUrl);
+    capturedObjectUrl = null;
+  }
+}
+
 captureButton.addEventListener('click', () => {
   if (!video.videoWidth || !video.videoHeight) return;
 
@@ -267,8 +281,55 @@ captureButton.addEventListener('click', () => {
   ctx.drawImage(plantOverlay, overlayX, overlayY, overlayW, overlayH);
   ctx.globalAlpha = 1;
 
-  const imageData = canvas.toDataURL('image/png');
-  downloadLink.href = imageData;
-  downloadLink.classList.remove('hidden');
-  downloadLink.click();
+  canvas.toBlob((blob) => {
+    if (!blob) {
+      saveNote.textContent = 'Could not create the photo. Please try again.';
+      captureResult.classList.remove('hidden');
+      return;
+    }
+
+    capturedBlob = blob;
+    revokeCapturedObjectUrl();
+    capturedObjectUrl = URL.createObjectURL(blob);
+
+    capturedImage.src = capturedObjectUrl;
+    desktopDownloadLink.href = capturedObjectUrl;
+    captureResult.classList.remove('hidden');
+
+    const file = new File([blob], 'greenhub-plant1-preview.png', { type: 'image/png' });
+    const canShareFile = !!(navigator.share && navigator.canShare && navigator.canShare({ files: [file] }));
+
+    if (canShareFile) {
+      shareButton.classList.remove('hidden');
+      desktopDownloadLink.classList.add('hidden');
+      saveNote.textContent = 'On iPhone, tap “Save / Share photo”, then choose “Save Image” to place it in Photos.';
+    } else {
+      shareButton.classList.add('hidden');
+      desktopDownloadLink.classList.remove('hidden');
+      saveNote.textContent = 'Use “Download photo” to save the image on this device.';
+    }
+
+    captureResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 'image/png');
 });
+
+shareButton.addEventListener('click', async () => {
+  if (!capturedBlob) return;
+
+  const file = new File([capturedBlob], 'greenhub-plant1-preview.png', { type: 'image/png' });
+
+  try {
+    await navigator.share({
+      files: [file],
+      title: 'GreenHub AR Preview',
+      text: 'GreenHub plant preview'
+    });
+  } catch (error) {
+    if (error && error.name === 'AbortError') return;
+
+    desktopDownloadLink.classList.remove('hidden');
+    saveNote.textContent = 'Sharing was not available. Use “Download photo” instead.';
+  }
+});
+
+window.addEventListener('beforeunload', revokeCapturedObjectUrl);

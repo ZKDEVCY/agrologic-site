@@ -32,13 +32,20 @@
         </div>
       </div>
       <button id="captureButton" disabled>Take photo with product</button>
-      <a id="downloadLink" class="secondary-button hidden" download="greenhub-plant1-preview.png">Save photo</a>
     </section>
 
     <section class="camera-stage" id="cameraStage">
       <video id="cameraVideo" autoplay playsinline muted></video>
       <img id="plantOverlay" src="assets/plant1.png" alt="Plant1 AR preview" />
       <div class="camera-placeholder" id="cameraPlaceholder">Select Plant1 to open the camera.</div>
+    </section>
+
+    <section id="captureResult" class="capture-result hidden" aria-live="polite">
+      <h2>Captured photo</h2>
+      <img id="capturedImage" alt="Captured GreenHub AR preview" />
+      <button id="shareButton" type="button">Save / Share photo</button>
+      <a id="desktopDownloadLink" class="secondary-button hidden" download="greenhub-plant1-preview.png">Download photo</a>
+      <p id="saveNote" class="small-note"></p>
     </section>
 
     <canvas id="captureCanvas" class="hidden"></canvas>
