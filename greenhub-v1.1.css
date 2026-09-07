@@ -1,0 +1,86 @@
+/* GreenHub v1.1 — marketplace subscription + sale/exchange/auction additions.
+   Loaded after the existing style.css so the working v0.9 AR styles remain untouched. */
+
+.membership-note {
+  margin-top: 18px !important;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.16);
+  font-size: 13px;
+}
+
+.acquisition-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 20px;
+}
+
+.acquisition-strip article {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid #dfe8dd;
+  border-radius: 16px;
+  background: #f5f8f3;
+}
+
+.acquisition-strip strong {
+  color: #264d2e;
+  font-size: 15px;
+}
+
+.acquisition-strip span {
+  color: #60705f;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.auction-badge {
+  background: rgba(184, 145, 62, 0.94);
+  color: #fff;
+}
+
+.auction-form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.action-detail {
+  margin: 16px 0;
+  padding: 15px;
+  border: 1px solid #dbe6d8;
+  border-radius: 15px;
+  background: #f6f9f4;
+}
+
+.action-detail p {
+  margin: 6px 0 0;
+  color: #5e6d5e;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .acquisition-strip { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .auction-form-fields { grid-template-columns: 1fr; }
+}
+
+/* v1.1 revision: sale + optional exchange */
+.exchange-toggle {
+  grid-template-columns: auto 1fr !important;
+  align-items: center;
+  justify-content: start;
+  gap: 9px !important;
+  padding: 10px 0 2px;
+}
+.exchange-toggle input {
+  width: auto;
+  margin: 0;
+}
+#priceField {
+  display: grid;
+  gap: 13px;
+}

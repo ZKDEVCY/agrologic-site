@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>greenhub marketplace</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="greenhub-v1.1.css" />
 </head>
 <body class="greenhub-page marketplace-page">
   <header class="greenhub-header">
@@ -22,25 +23,26 @@
       <div class="marketplace-hero-copy">
         <span class="eyebrow">plant-to-plant community marketplace</span>
         <h1>Give plants a new home.</h1>
-        <p>Buy, sell or exchange plants directly with other plant lovers. GreenHub connects private individuals and keeps the process simple.</p>
+        <p>Buy, exchange or bid for plants directly with other plant lovers. GreenHub connects private individuals and collectors in one simple marketplace.</p>
         <div class="hero-actions">
           <a class="primary-button" href="#marketplace">Browse plants</a>
           <button class="outline-button" id="openListingButton" type="button">+ List your plant</button>
         </div>
         <div class="marketplace-points">
-          <span>✓ Free to list</span>
-          <span>✓ Direct C2C transactions</span>
-          <span>✓ Sell or exchange</span>
+          <span>✓ Direct C2C sales</span>
+          <span>✓ Plant-for-plant exchange</span>
+          <span>✓ Community auctions</span>
           <span>✓ AR preview when available</span>
         </div>
       </div>
       <aside class="marketplace-model">
-        <span class="eyebrow">GreenHub model</span>
-        <strong>People trade directly.</strong>
-        <p>GreenHub is the trusted meeting point. A small service fee is intended only when a sale is successfully completed.</p>
-        <div class="model-row"><span>Listing</span><b>Free</b></div>
-        <div class="model-row"><span>Plant exchange</span><b>Free prototype</b></div>
-        <div class="model-row"><span>Successful sale</span><b>Small service fee</b></div>
+        <span class="eyebrow">GreenHub membership</span>
+        <strong>Trade without transaction fees.</strong>
+        <p>GreenHub uses a simple subscription model instead of taking a fee from each successful sale or exchange.</p>
+        <div class="model-row"><span>Monthly membership</span><b>€1.99 / month</b></div>
+        <div class="model-row"><span>Annual membership</span><b>€19.99 / year</b></div>
+        <div class="model-row"><span>Marketplace access</span><b>Sale · Exchange · Auction</b></div>
+        <p class="membership-note">One membership supports marketplace participation, including plant exchanges that do not involve a cash transaction.</p>
       </aside>
     </section>
 
@@ -53,18 +55,24 @@
         <button class="primary-button compact-button" id="openListingButton2" type="button">List a plant</button>
       </div>
 
+      <div class="acquisition-strip" aria-label="Ways to acquire plants">
+        <article><strong>Direct sale + optional exchange</strong><span>Buy at the listed price, or offer an already-listed plant when the seller has enabled exchange offers.</span></article>
+        <article><strong>Exchange</strong><span>Offer one of your already-listed plants. The exchange proceeds only after both members approve.</span></article>
+        <article><strong>Auction</strong><span>Bid for 7 days, starting from the seller's minimum asked price.</span></article>
+      </div>
+
       <div class="marketplace-toolbar" aria-label="Marketplace filters">
         <label>
           Search
           <input id="marketSearch" type="search" placeholder="Plant name, species or location" />
         </label>
         <label>
-          Listing type
+          Acquisition type
           <select id="listingTypeFilter">
             <option value="all">All listings</option>
-            <option value="sale">For sale</option>
-            <option value="exchange">For exchange</option>
-            <option value="both">Sale or exchange</option>
+            <option value="sale">Direct sale (optionally + exchange)</option>
+            <option value="exchange">Exchange</option>
+            <option value="auction">Auction</option>
           </select>
         </label>
         <label>
@@ -80,20 +88,14 @@
       </div>
 
       <div class="listing-grid" id="listingGrid">
-        <article class="plant-listing" data-name="Plant1 indoor foliage" data-type="both" data-location="Larnaca">
+        <article class="plant-listing" data-name="Plant1 indoor foliage" data-type="sale exchange" data-location="Larnaca">
           <div class="listing-image plant1-card">
             <img src="assets/plant1.png" alt="Plant1 indoor plant" />
-            <div class="listing-badges">
-              <span class="listing-badge sale-badge">€35</span>
-              <span class="listing-badge exchange-badge">Exchange</span>
-            </div>
+            <div class="listing-badges"><span class="listing-badge sale-badge">Direct sale · €35</span><span class="listing-badge exchange-badge">Exchange open</span></div>
           </div>
           <div class="listing-body">
             <div class="listing-title-row">
-              <div>
-                <h3>Plant1</h3>
-                <p class="latin-name">Indoor foliage plant</p>
-              </div>
+              <div><h3>Plant1</h3><p class="latin-name">Indoor foliage plant</p></div>
               <span class="condition-pill">Healthy</span>
             </div>
             <dl class="plant-facts">
@@ -101,76 +103,64 @@
               <div><dt>Location</dt><dd>Larnaca</dd></div>
               <div><dt>Seller</dt><dd>GreenHub member</dd></div>
             </dl>
-            <p class="listing-description">Established potted plant, suitable for bright indoor spaces. Available for direct sale or a suitable plant exchange.</p>
+            <p class="listing-description">Established potted plant, suitable for bright indoor spaces. Available as a direct C2C sale, with exchange offers also accepted by the seller.</p>
             <div class="listing-actions">
               <button class="primary-button buy-button" type="button" data-plant="Plant1" data-price="€35">Buy / Contact</button>
-              <button class="secondary-action exchange-button" type="button" data-plant="Plant1">Offer exchange</button>
+              <button class="secondary-action exchange-button" type="button" data-plant="Plant1">Offer listed plant</button>
               <a class="ar-action" href="ar-preview.html">View in your space (AR)</a>
             </div>
           </div>
         </article>
 
-        <article class="plant-listing" data-name="Monstera deliciosa" data-type="sale" data-location="Nicosia">
+        <article class="plant-listing" data-name="Monstera deliciosa" data-type="auction" data-location="Nicosia">
           <div class="listing-image emoji-plant" aria-label="Monstera listing image placeholder">🌿
-            <div class="listing-badges"><span class="listing-badge sale-badge">€28</span></div>
+            <div class="listing-badges"><span class="listing-badge auction-badge">Auction · from €20</span></div>
           </div>
           <div class="listing-body">
             <div class="listing-title-row">
-              <div>
-                <h3>Monstera deliciosa</h3>
-                <p class="latin-name">Swiss cheese plant</p>
-              </div>
+              <div><h3>Monstera deliciosa</h3><p class="latin-name">Swiss cheese plant</p></div>
               <span class="condition-pill">Healthy</span>
             </div>
             <dl class="plant-facts">
-              <div><dt>Size</dt><dd>Approx. 55 cm</dd></div>
+              <div><dt>Minimum bid</dt><dd>€20</dd></div>
               <div><dt>Location</dt><dd>Nicosia</dd></div>
-              <div><dt>Seller</dt><dd>Private seller</dd></div>
+              <div><dt>Duration</dt><dd>7 days</dd></div>
             </dl>
-            <p class="listing-description">Young established Monstera in a nursery pot. Collection preferred.</p>
+            <p class="listing-description">Young established Monstera in a nursery pot. Auction starts at the seller's minimum asked price and remains open for 7 days.</p>
             <div class="listing-actions">
-              <button class="primary-button buy-button" type="button" data-plant="Monstera deliciosa" data-price="€28">Buy / Contact</button>
+              <button class="primary-button auction-button" type="button" data-plant="Monstera deliciosa" data-minimum="€20" data-timeframe="7 days">Place bid</button>
             </div>
           </div>
         </article>
 
         <article class="plant-listing" data-name="Aloe vera pup barbadensis" data-type="exchange" data-location="Limassol">
           <div class="listing-image emoji-plant" aria-label="Aloe vera listing image placeholder">🪴
-            <div class="listing-badges"><span class="listing-badge exchange-badge">Exchange only</span></div>
+            <div class="listing-badges"><span class="listing-badge exchange-badge">Exchange</span></div>
           </div>
           <div class="listing-body">
             <div class="listing-title-row">
-              <div>
-                <h3>Aloe vera pup</h3>
-                <p class="latin-name">Aloe vera</p>
-              </div>
+              <div><h3>Aloe vera pup</h3><p class="latin-name">Aloe vera</p></div>
               <span class="condition-pill">Young plant</span>
             </div>
             <dl class="plant-facts">
               <div><dt>Size</dt><dd>Approx. 25 cm</dd></div>
               <div><dt>Location</dt><dd>Limassol</dd></div>
-              <div><dt>Seller</dt><dd>Private seller</dd></div>
+              <div><dt>Exchange for</dt><dd>Succulent</dd></div>
             </dl>
-            <p class="listing-description">Healthy offset separated from a mature mother plant. Looking to exchange for another succulent.</p>
+            <p class="listing-description">Healthy offset separated from a mature mother plant. Exchange proposals must use a plant already listed by the interested member.</p>
             <div class="listing-actions">
-              <button class="secondary-action exchange-button" type="button" data-plant="Aloe vera pup">Offer exchange</button>
+              <button class="secondary-action exchange-button" type="button" data-plant="Aloe vera pup">Offer listed plant</button>
             </div>
           </div>
         </article>
 
-        <article class="plant-listing" data-name="Ficus elastica rubber plant" data-type="both" data-location="Paphos">
+        <article class="plant-listing" data-name="Ficus elastica rubber plant" data-type="sale exchange" data-location="Paphos">
           <div class="listing-image emoji-plant" aria-label="Rubber plant listing image placeholder">🌱
-            <div class="listing-badges">
-              <span class="listing-badge sale-badge">€20</span>
-              <span class="listing-badge exchange-badge">Exchange</span>
-            </div>
+            <div class="listing-badges"><span class="listing-badge sale-badge">Direct sale · €20</span><span class="listing-badge exchange-badge">Exchange open</span></div>
           </div>
           <div class="listing-body">
             <div class="listing-title-row">
-              <div>
-                <h3>Rubber plant</h3>
-                <p class="latin-name">Ficus elastica</p>
-              </div>
+              <div><h3>Rubber plant</h3><p class="latin-name">Ficus elastica</p></div>
               <span class="condition-pill">Healthy</span>
             </div>
             <dl class="plant-facts">
@@ -178,10 +168,10 @@
               <div><dt>Location</dt><dd>Paphos</dd></div>
               <div><dt>Seller</dt><dd>Private seller</dd></div>
             </dl>
-            <p class="listing-description">Compact indoor Ficus. Seller is open to either a direct sale or exchange proposal.</p>
+            <p class="listing-description">Compact indoor Ficus offered for direct sale; the seller is also open to suitable exchange offers.</p>
             <div class="listing-actions">
               <button class="primary-button buy-button" type="button" data-plant="Rubber plant" data-price="€20">Buy / Contact</button>
-              <button class="secondary-action exchange-button" type="button" data-plant="Rubber plant">Offer exchange</button>
+              <button class="secondary-action exchange-button" type="button" data-plant="Rubber plant">Offer listed plant</button>
             </div>
           </div>
         </article>
@@ -192,24 +182,21 @@
 
     <section id="how-it-works" class="how-it-works">
       <div class="section-heading">
-        <div>
-          <span class="eyebrow">Simple C2C flow</span>
-          <h2>How GreenHub Marketplace works</h2>
-        </div>
+        <div><span class="eyebrow">Simple C2C flow</span><h2>How GreenHub Marketplace works</h2></div>
       </div>
       <div class="steps-grid">
-        <article><span>1</span><h3>List your plant</h3><p>Add photos, plant details, location and choose Sale, Exchange or Both.</p></article>
-        <article><span>2</span><h3>Discover & decide</h3><p>Browse community listings. Use AR where available to check how a plant fits your space.</p></article>
-        <article><span>3</span><h3>Connect directly</h3><p>Buyers contact sellers or submit a plant-for-plant exchange proposal.</p></article>
-        <article><span>4</span><h3>Complete the deal</h3><p>The parties agree on the transaction. Future GreenHub payments will support a small service fee on successful sales.</p></article>
+        <article><span>1</span><h3>Join GreenHub</h3><p>Choose €1.99 monthly or €19.99 yearly membership for marketplace participation.</p></article>
+        <article><span>2</span><h3>List your plant</h3><p>Add the plant details and choose Direct Sale (optionally also accepting exchange offers), Exchange-only, or Auction.</p></article>
+        <article><span>3</span><h3>Match the right deal</h3><p>Buy at the listed price, offer an already-listed plant for exchange, or bid in an active auction.</p></article>
+        <article><span>4</span><h3>Agree & complete</h3><p>Sales connect buyer and seller; exchanges require approval by both members; auctions run for a fixed 7-day period.</p></article>
       </div>
     </section>
 
     <section id="community" class="community-callout">
       <div>
-        <span class="eyebrow">More than buying</span>
-        <h2>Keep useful plants in circulation.</h2>
-        <p>GreenHub is designed to make it easier for plants, cuttings, pups and surplus specimens to move between people instead of being discarded.</p>
+        <span class="eyebrow">Built for plant enthusiasts</span>
+        <h2>Buy, collect, exchange and discover.</h2>
+        <p>GreenHub gives collectors and everyday plant lovers one place to move plants between people through direct sales, mutually agreed exchanges and timed auctions.</p>
       </div>
       <button class="outline-button" id="openListingButton3" type="button">List a plant</button>
     </section>
@@ -218,29 +205,35 @@
   <div class="marketplace-modal hidden" id="listingModal" role="dialog" aria-modal="true" aria-labelledby="listingModalTitle">
     <div class="marketplace-modal-card">
       <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
-      <span class="eyebrow">Prototype listing</span>
+      <span class="eyebrow">v1.1 prototype listing</span>
       <h2 id="listingModalTitle">List your plant</h2>
-      <p class="small-note">This v1.0 form demonstrates the seller flow. It does not publish data to a database yet.</p>
+      <p class="small-note">This prototype demonstrates the seller flow. Listings are not yet stored in a database.</p>
       <form id="listingForm">
         <label>Plant name<input id="newPlantName" required placeholder="e.g. Monstera deliciosa" /></label>
         <label>Location
           <select id="newPlantLocation" required>
-            <option value="Larnaca">Larnaca</option>
-            <option value="Nicosia">Nicosia</option>
-            <option value="Limassol">Limassol</option>
-            <option value="Paphos">Paphos</option>
+            <option value="Larnaca">Larnaca</option><option value="Nicosia">Nicosia</option><option value="Limassol">Limassol</option><option value="Paphos">Paphos</option>
           </select>
         </label>
-        <label>Listing type
+        <label>Acquisition type
           <select id="newPlantType" required>
-            <option value="sale">For sale</option>
-            <option value="exchange">For exchange</option>
-            <option value="both">Sale or exchange</option>
+            <option value="sale">Direct sale (optionally + exchange)</option>
+            <option value="exchange">Exchange</option>
+            <option value="auction">Auction</option>
           </select>
         </label>
-        <label>Price (€)<input id="newPlantPrice" type="number" min="0" step="1" placeholder="Required for sale listings" /></label>
+        <div id="priceField">
+          <label>Sale price (€)<input id="newPlantPrice" type="number" min="0" step="1" placeholder="e.g. 35" /></label>
+          <label class="exchange-toggle"><input id="newSaleAllowsExchange" type="checkbox" /> Also accept exchange offers for this sale listing</label>
+          <label id="saleExchangePreferenceField" class="hidden">Preferred exchange<input id="newSaleExchangePreference" placeholder="e.g. another succulent, orchid, open to offers" /></label>
+        </div>
+        <label id="exchangeField" class="hidden">Preferred exchange<input id="newExchangePreference" placeholder="e.g. another succulent, orchid, open to offers" /></label>
+        <div id="auctionFields" class="auction-form-fields hidden">
+          <label>Minimum asked price (€)<input id="newAuctionMinimum" type="number" min="0" step="1" placeholder="e.g. 20" /></label>
+          <p class="small-note"><strong>Auction duration:</strong> 7 days (fixed).</p>
+        </div>
         <label>Approximate size<input id="newPlantSize" placeholder="e.g. 60 cm high" /></label>
-        <label>Description<textarea id="newPlantDescription" placeholder="Condition, pot, collection information, what you would exchange for..."></textarea></label>
+        <label>Description<textarea id="newPlantDescription" placeholder="Condition, pot, collection information, exchange preference or auction notes..."></textarea></label>
         <button class="primary-button" type="submit">Preview listing</button>
       </form>
     </div>
@@ -250,11 +243,12 @@
     <div class="marketplace-modal-card compact-modal">
       <button class="modal-close" type="button" data-close-action aria-label="Close">×</button>
       <span class="eyebrow" id="actionEyebrow">Marketplace</span>
-      <h2 id="actionModalTitle">Contact seller</h2>
+      <h2 id="actionModalTitle">Marketplace action</h2>
       <p id="actionModalText"></p>
+      <div id="actionDetail" class="action-detail hidden"></div>
       <div class="prototype-notice">
-        <strong>v1.0 prototype</strong>
-        <p>This demonstrates the intended transaction flow. Messaging, accounts and payments will be connected in a later version.</p>
+        <strong>v1.1 prototype</strong>
+        <p>This demonstrates the intended Marketplace logic. Accounts, subscriptions, messaging, approvals, payments and live bidding will be connected in later development.</p>
       </div>
       <button class="primary-button" type="button" data-close-action>Continue browsing</button>
     </div>
