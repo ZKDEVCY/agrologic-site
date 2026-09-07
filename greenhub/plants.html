@@ -1,49 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Plants</title>
-  <link rel="stylesheet" href="greenhub.css" />
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="index.html">greenhub</a>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Plants</title><link rel="stylesheet" href="greenhub.css"><link rel="stylesheet" href="greenhub-v1.2.css"></head><body><header class="topbar">
+  <a class="brand" href="index.html">greenhub</a>
+  <div class="topbar-right">
     <nav>
       <a href="index.html">Home</a>
       <a href="plants.html">My Plants</a>
-      <button id="logoutButton">Logout</button>
+      <a href="../greenhub.html">Marketplace</a>
     </nav>
-  </header>
-
-  <main class="page-shell">
-    <section class="section-header">
-      <div>
-        <p class="eyebrow">plant care dashboard</p>
-        <h1>My Plants</h1>
-        <p>First functional GreenHub module.</p>
-      </div>
-      <button class="primary-action">+ Add Plant</button>
-    </section>
-
-    <section class="plant-grid">
-      <article class="plant-card">
-        <div class="plant-avatar">🌱</div>
-        <div>
-          <p class="status healthy">Healthy</p>
-          <h2>Aloe Vera #001</h2>
-          <p>Aloe vera barbadensis Miller</p>
-        </div>
-        <div class="plant-data">
-          <span>Last watered: 2 days ago</span>
-          <span>Location: Larnaca</span>
-          <span>Module: Care profile</span>
-        </div>
-        <a class="secondary-button" href="plant-profile.html">Open Profile</a>
-      </article>
-    </section>
-  </main>
-
-  <script src="greenhub.js"></script>
-</body>
-</html>
+    <a class="account-chip" href="profile.html" aria-label="Open my profile">
+      <span class="account-avatar">👤</span>
+      <span class="account-copy">
+        <strong data-user-name>Member</strong>
+        <small><span data-user-location>Cyprus</span> · My account</small>
+      </span>
+    </a>
+    <button id="logoutButton" class="logout-compact" type="button">Logout</button>
+  </div>
+</header><main class="page-shell"><section class="section-header"><div><p class="eyebrow">your collection</p><h1>My Plants</h1><p>Add your real plant photos and prepare each plant for sale.</p></div><button id="openAddPlant" class="primary-action" type="button">+ Add Plant</button></section><section class="plant-testing-note"><strong>v1.2 test workflow</strong><span>Plant records and compressed photos are stored only in this browser.</span></section><section id="emptyPlants" class="empty-state"><h2>No plants added yet</h2><p>Use “+ Add Plant” and upload your first photo.</p></section><section class="plant-grid" id="plantGrid"></section></main><div class="plant-modal hidden" id="plantModal"><div class="plant-modal-card"><button id="closePlantModal" class="plant-modal-close">×</button><p class="eyebrow">New plant record</p><h2>Add plant</h2><form id="plantForm"><div class="photo-upload-block">
+  <span class="field-label">Plant photo</span>
+  <label class="photo-dropzone" id="photoDropzone" for="plantPhoto">
+    <input id="plantPhoto" class="photo-file-input" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,image/*" required>
+    <span class="photo-upload-icon">📷</span>
+    <strong id="photoUploadTitle">Choose plant photo</strong>
+    <span id="photoUploadHelp">Click here to browse your computer or phone. JPG, PNG, WEBP and normal phone photos are accepted.</span>
+  </label>
+  <img id="photoPreview" class="photo-preview hidden" alt="Selected plant photo preview">
+  <div id="photoSelectedInfo" class="photo-selected-info hidden"></div>
+  <button id="changePhotoButton" class="secondary-button hidden" type="button">Choose a different photo</button>
+</div><label>Plant name<input id="plantName" required></label><label>Scientific name / variety<input id="plantSpecies"></label><label>Approximate size<input id="plantSize" placeholder="e.g. 70 cm high"></label><label>Condition<select id="plantCondition"><option>Healthy</option><option>Good</option><option>Needs care</option></select></label><label>Description<textarea id="plantDescription"></textarea></label><fieldset class="sale-fields"><legend>Prepare for marketplace</legend><label>Sale price (€)<input id="plantPrice" type="number" min="0" step="1"></label><label class="checkbox-row"><input id="plantAllowsExchange" type="checkbox"> Also accept plant exchange offers</label><label id="plantExchangePreferenceField" class="hidden">Preferred exchange<input id="plantExchangePreference"></label><label class="checkbox-row ready-row"><input id="plantReady" type="checkbox"><strong>Ready for marketplace</strong></label></fieldset><button class="primary-action" type="submit">Save plant</button><small id="plantFormMessage" class="form-message"></small></form></div></div><script src="greenhub.js"></script><script src="plants.js"></script></body></html>

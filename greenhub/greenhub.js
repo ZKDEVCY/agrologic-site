@@ -1,13 +1,1 @@
-const isLoggedIn = localStorage.getItem("greenhubLoggedIn") === "true";
-const logoutButton = document.getElementById("logoutButton");
-
-if (!isLoggedIn) {
-  window.location.href = "../login.html";
-}
-
-if (logoutButton) {
-  logoutButton.addEventListener("click", () => {
-    localStorage.removeItem("greenhubLoggedIn");
-    window.location.href = "../login.html";
-  });
-}
+const SESSION='greenhubSessionV12';let session=null;try{session=JSON.parse(localStorage.getItem(SESSION))}catch{}const legacy=localStorage.getItem('greenhubLoggedIn')==='true';if(!session&&!legacy)location.href='../login.html';document.querySelectorAll('[data-user-name]').forEach(e=>e.textContent=session?.displayName||'Zacharias');document.querySelectorAll('[data-user-location]').forEach(e=>e.textContent=session?.location||'Larnaca');const logoutButton=document.getElementById('logoutButton');if(logoutButton)logoutButton.onclick=()=>{localStorage.removeItem(SESSION);localStorage.removeItem('greenhubLoggedIn');location.href='../login.html'};
