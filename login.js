@@ -1,1 +1,27 @@
-const USERS='greenhubUsersV12',SESSION='greenhubSessionV12';function getUsers(){try{return JSON.parse(localStorage.getItem(USERS))||[]}catch{return[]}}function showPanel(create){signInPanel.classList.toggle('hidden',create);createAccountPanel.classList.toggle('hidden',!create);signInTab.classList.toggle('active',!create);createAccountTab.classList.toggle('active',create);loginMessage.textContent='';createAccountMessage.textContent=''}signInTab.onclick=()=>showPanel(false);createAccountTab.onclick=()=>showPanel(true);loginForm.onsubmit=e=>{e.preventDefault();const u=username.value.trim().toLowerCase(),p=password.value;if((u==='admin'||u==='zacharias')&&p==='greenhub'){localStorage.setItem(SESSION,JSON.stringify({id:'legacy-zacharias',username:'zacharias',displayName:'Zacharias',email:'',location:'Larnaca'}));localStorage.setItem('greenhubLoggedIn','true');location.href='greenhub/index.html';return}const x=getUsers().find(v=>v.username.toLowerCase()===u&&v.password===p);if(!x){loginMessage.textContent='Incorrect username or password.';return}localStorage.setItem(SESSION,JSON.stringify({id:x.id,username:x.username,displayName:x.displayName,email:x.email,location:x.location}));localStorage.setItem('greenhubLoggedIn','true');location.href='greenhub/index.html'};createAccountForm.onsubmit=e=>{e.preventDefault();if(newPassword.value!==confirmPassword.value){createAccountMessage.textContent='Passwords do not match.';return}const a=getUsers(),u=newUsername.value.trim();if(a.some(x=>x.username.toLowerCase()===u.toLowerCase())||['admin','zacharias'].includes(u.toLowerCase())){createAccountMessage.textContent='That username is already in use.';return}const x={id:'user-'+Date.now(),displayName:newDisplayName.value.trim(),username:u,email:newEmail.value.trim(),location:newLocation.value,password:newPassword.value,createdAt:new Date().toISOString()};a.push(x);localStorage.setItem(USERS,JSON.stringify(a));localStorage.setItem(SESSION,JSON.stringify({id:x.id,username:x.username,displayName:x.displayName,email:x.email,location:x.location}));localStorage.setItem('greenhubLoggedIn','true');location.href='greenhub/index.html'};
+const SESSION='greenhubSessionV12';
+
+// Private beta v1.2.1
+// Public account registration is intentionally disabled.
+// Only the existing GreenHub test/admin login is accepted.
+
+loginForm.onsubmit=e=>{
+  e.preventDefault();
+
+  const u=username.value.trim().toLowerCase();
+  const p=password.value;
+
+  if((u==='admin'||u==='zacharias')&&p==='greenhub'){
+    localStorage.setItem(SESSION,JSON.stringify({
+      id:'legacy-zacharias',
+      username:'zacharias',
+      displayName:'Zacharias',
+      email:'',
+      location:'Larnaca'
+    }));
+    localStorage.setItem('greenhubLoggedIn','true');
+    location.href='greenhub/index.html';
+    return;
+  }
+
+  loginMessage.textContent='Incorrect username or password. New registrations are currently closed.';
+};
