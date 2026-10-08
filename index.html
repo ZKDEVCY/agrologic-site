@@ -1,36 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>agrologic</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="landing-page">
-  <main class="landing-overlay">
-    <section class="landing-card">
-      <h1>agrologic</h1>
-      <p>Innovation in Agriculture</p>
-      <a class="primary-button" href="login.html">greenhub by agrologic</a>
-    </section>
-  </main>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Agrologic — Cyprus-grown Aloe vera, agronomy and agricultural biotechnology for botanical innovation."><title>agrologic | Aloe Vera & Agricultural Biotechnology</title><link rel="stylesheet" href="agrologic-home.css"></head><body>
+<header class="top"><a class="logo brand-lockup" href="#home"><span class="brand-name">agrologic</span><span class="brand-tagline">Innovation in Agriculture</span></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav"><a href="#about">About</a><a href="#cultivation">Cultivation</a><a href="#science">Our Approach</a><a href="#applications">Applications</a><a href="#benefits">Aloe Benefits</a><a href="#gallery">Our Fields</a><a href="#contact">Contact</a><a class="greenhub" href="login.html">greenhub by agrologic ↗</a></nav></header>
+<main id="home"><section class="hero"><img src="assets/land3.jpeg" alt="Agrologic Aloe vera cultivation in Cyprus at sunset"><div class="shade"></div><div class="hero-inner"><span class="kicker">CULTIVATED IN CYPRUS · INSPIRED BY SCIENCE</span><h1>Rooted in nature.<br><em>Driven by innovation.</em></h1><p>From our Aloe vera fields to the future of botanical ingredients.</p><a class="cta light" href="#about">Discover agrologic <span>↗</span></a></div><span class="hero-side">INNOVATION IN AGRICULTURE</span></section>
+<section id="about" class="intro wrap"><div><span class="eyebrow">WHO WE ARE</span><h2>Where agricultural knowledge meets botanical potential.</h2></div><div><p class="lead">Agrologic is a Cyprus-based agricultural initiative focused on Aloe vera cultivation, agronomy and biotechnology-led innovation.</p><p>We combine practical field experience with scientific thinking to explore the value of responsibly grown Aloe vera for cosmetic and botanical applications.</p><a class="textlink" href="#contact">Connect with us ↗</a></div></section>
+<section class="photo-banner"><img src="assets/land5.jpeg" alt="Close view of Aloe vera plants cultivated in rows"><div><span class="eyebrow">OUR FOCUS</span><h2>Real cultivation.<br>Real botanical potential.</h2></div></section>
+<section id="cultivation" class="services wrap"><div class="section-head"><span class="eyebrow">WHAT WE DO</span><h2>From soil to science.</h2><p>Our work starts in the field and extends toward new opportunities in plant-based innovation.</p></div><div class="cards"><article><img src="assets/land2.jpeg" alt="Rows of drip-irrigated Aloe vera plants"><div><span>01 / CULTIVATION</span><h3>Aloe Vera Production</h3><p>Field-grown Aloe vera with an emphasis on crop management, traceability and plant quality.</p><a href="#gallery">Explore our fields ↗</a></div></article><article id="science"><img src="assets/land1.jpeg" alt="Aloe vera field and agricultural infrastructure"><div><span>02 / AGRONOMY</span><h3>Agricultural Biotechnology</h3><p>Applying agronomic expertise and a science-informed approach to sustainable agricultural development.</p><a href="#contact">Discuss opportunities ↗</a></div></article><article id="applications"><img src="assets/land4.jpeg" alt="Cultivated Aloe vera field in Cyprus"><div><span>03 / BOTANICAL APPLICATIONS</span><h3>Aloe-Based Ingredients</h3><p>Exploring Aloe vera as a raw botanical material for cosmetic and personal-care formulation development.</p><a href="#contact">Enquire about collaboration ↗</a></div></article></div></section>
 
-  <button class="chat-button" id="chatButton" aria-label="Open chat">💬</button>
-  <section class="chat-box" id="chatBox" aria-hidden="true">
-    <h2>Chat with us</h2>
-    <input type="text" placeholder="Name" />
-    <input type="email" placeholder="Email" />
-    <textarea placeholder="Message"></textarea>
-    <button>Send</button>
-  </section>
-
-  <script>
-    const chatButton = document.getElementById('chatButton');
-    const chatBox = document.getElementById('chatBox');
-    chatButton.addEventListener('click', () => {
-      chatBox.classList.toggle('open');
-      chatBox.setAttribute('aria-hidden', !chatBox.classList.contains('open'));
-    });
-  </script>
-</body>
-</html>
+<section id="benefits" class="aloe-benefits" aria-labelledby="benefits-title">
+  <div class="wrap">
+    <div class="benefits-heading"><span class="eyebrow">ALOE VERA &amp; SKINCARE</span><h2 id="benefits-title">Botanical care, backed by science.</h2>
+    <p>Aloe vera leaf gel is valued in cosmetic formulations for its water-rich composition and skin-conditioning properties.</p></div>
+    <div class="benefits-visual">
+      <div class="benefit benefit-one"><span class="benefit-icon" aria-hidden="true">◉</span><h3>Hydration</h3><p>Water-rich gel helps support a moisturized skin feel when appropriately formulated.</p></div>
+      <div class="benefit benefit-two"><span class="benefit-icon" aria-hidden="true">✧</span><h3>Soothing care</h3><p>Commonly used in products designed to comfort and condition skin.</p></div>
+      <div class="benefits-center"><span class="center-small">FROM THE LEAF</span><div class="aloe-illustration" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>ALOE<br>VERA</strong><span class="center-latin">Aloe barbadensis Miller</span></div>
+      <div class="benefit benefit-three"><span class="benefit-icon" aria-hidden="true">◇</span><h3>Skin conditioning</h3><p>Used to enhance the soft, smooth feel of cosmetic preparations.</p></div>
+      <div class="benefit benefit-four"><span class="benefit-icon" aria-hidden="true">✳</span><h3>Formulation versatility</h3><p>Suitable for consideration in gels, creams, lotions and after-sun products.</p></div>
+    </div>
+    <p class="benefits-disclaimer">Cosmetic applications shown are general ingredient uses, not claims of medical treatment. Product performance depends on formulation, processing and testing.</p>
+  </div>
+</section>
+<section class="statement"><div class="wrap"><span class="eyebrow">OUR PHILOSOPHY</span><h2>Quality begins long before the ingredient reaches the formulation.</h2><p>Thoughtful cultivation. Scientific curiosity. A long-term commitment to botanical innovation.</p></div></section>
+<section id="gallery" class="gallery wrap"><div class="section-head"><span class="eyebrow">FROM OUR FIELDS</span><h2>Grown here, in Cyprus.</h2><p>A closer look at our cultivation and production environment.</p></div><div class="gallery-grid"><img src="assets/land2.jpeg" alt="Aloe vera rows in open farmland"><img src="assets/land5.jpeg" alt="Established Aloe vera plants"><img src="assets/land3.jpeg" alt="Aloe vera field at sunset"><img src="assets/land1.jpeg" alt="Agricultural infrastructure beside Aloe vera"></div></section>
+<section id="contact" class="contact"><div class="wrap contact-grid"><div><span class="eyebrow">LET'S CONNECT</span><h2>Interested in working together?</h2><p>We welcome conversations with cosmetics professionals, formulators, distributors and agricultural partners.</p></div><div class="contact-box"><span>BUSINESS ENQUIRIES</span><a class="email" href="mailto:agrologic.cy@gmail.com?subject=Agrologic%20Business%20Enquiry">agrologic.cy@gmail.com ↗</a><p>Cyprus · Agricultural biotechnology & Aloe vera</p><a class="cta" href="mailto:agrologic.cy@gmail.com?subject=Agrologic%20Business%20Enquiry">Get in touch ↗</a></div></div></section></main>
+<footer><div class="wrap foot"><div><a class="logo" href="#home">agrologic</a><p>Innovation in Agriculture</p></div><div><a href="#about">About</a><a href="#cultivation">Cultivation</a><a href="#contact">Contact</a><a href="login.html">greenhub by agrologic ↗</a></div><small>© <span id="year"></span> agrologic · Cyprus</small></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();const b=document.querySelector('.menu'),n=document.querySelector('#nav');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o))});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false')}));</script></body></html>
