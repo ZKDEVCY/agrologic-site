@@ -1,0 +1,28 @@
+/* AgroMet Live: compact floating widget within top quarter of hero photo */
+.agromet-section{position:absolute;top:14px;left:0;right:0;z-index:3;padding:0 4.2%;background:transparent;color:#233e30}
+.am-overlay-inner{width:100%;margin:auto}
+.am-widget{background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.7);border-radius:14px;padding:12px 18px;box-shadow:0 14px 40px #081b1580;backdrop-filter:blur(12px)}
+.am-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.am-top strong{font-size:20px;letter-spacing:-.04em;color:#233e30}
+.am-top small{display:block;margin-top:1px;font-size:10px;color:#718171}
+.am-status{font-size:10px;font-weight:700;background:#e7efe3;color:#3a6945;padding:6px 9px;border-radius:30px}
+.am-status[data-state=stale],.am-status[data-state=waiting]{background:#fff3d6;color:#8c6223}
+.am-status[data-state=error]{background:#ffe8e5;color:#8c3831}
+.am-controls{display:flex;align-items:end;gap:8px;margin:9px 0}
+.am-select-wrap{flex:1;min-width:160px}
+.am-select-wrap label{display:block;font-size:9px;letter-spacing:.12em;font-weight:800;margin-bottom:4px;color:#637b61}
+.am-controls select{width:100%;padding:7px 10px;background:#fff;border:1px solid #cbd8cb;border-radius:6px;color:#233e30;font:inherit;font-size:12px}
+.am-controls button{padding:8px 12px;border:1px solid #cbd8cb;border-radius:6px;background:#fff;color:#233e30;font-weight:700;font-size:11px;cursor:pointer}
+.am-metrics{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+.am-metric{background:#f5f7f2;border:1px solid #edf1e9;border-radius:7px;padding:8px 10px;min-width:0}
+.am-metric span{font-size:10px;color:#6c7a6a;white-space:nowrap}
+.am-metric strong{display:block;font-size:17px;color:#233e30;margin-top:3px}
+.am-foot{border-top:1px solid #e7ede5;margin-top:8px;padding-top:6px;display:flex;gap:12px;justify-content:space-between;align-items:center}
+.am-foot p{margin:2px 0;font-size:9px;color:#697b6a}
+.am-foot a{text-decoration:underline}
+.am-foot button{border:0;background:#233e30;color:#fff;padding:8px 11px;border-radius:6px;cursor:pointer;font-size:11px;flex-shrink:0}
+/* Keep the hero headline clear of the widget */
+.hero:has(.agromet-section) .hero-inner{top:65%;transform:translateY(-38%)}
+@media(max-width:1050px){.am-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.hero:has(.agromet-section){min-height:820px}.hero:has(.agromet-section) .hero-inner{top:70%}}
+@media(max-width:800px){.agromet-section{padding:0 16px;top:12px}.am-widget{padding:12px}.am-metric span{font-size:10px}.am-metric strong{font-size:16px}.hero:has(.agromet-section){height:auto;min-height:940px}.hero:has(.agromet-section) .hero-inner{top:65%;left:24px;right:24px;transform:translateY(-10%)}.hero:has(.agromet-section) h1{font-size:clamp(40px,8vw,65px)}}
+@media(max-width:520px){.am-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.am-controls{flex-wrap:wrap}.am-select-wrap{flex-basis:100%}.am-controls button{width:100%}.am-foot{align-items:flex-start}.am-foot p{font-size:9px}.am-status{font-size:9px}.hero:has(.agromet-section){min-height:1050px}.hero:has(.agromet-section) .hero-inner{top:66%}.hero:has(.agromet-section) h1{font-size:44px}}
