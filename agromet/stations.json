@@ -1,19 +1,19 @@
 {
   "source": "Cyprus Department of Meteorology",
   "source_url": "https://dom.org.cy/AWS/OpenData/CyDoM.xml",
-  "fetched_at": "2026-10-19T04:36:25.988042+00:00",
-  "station_count": 53,
+  "fetched_at": "2026-10-19T10:18:38.367246+00:00",
+  "station_count": 54,
   "stations": [
     {
       "id": "ACHNA",
       "name": "Achna",
       "latitude": 35.0255056,
       "longitude": 33.7744306,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.7,
-        "humidity": 68.0,
-        "wind": 2.96,
+        "temperature": 24.4,
+        "humidity": 45.0,
+        "wind": 11.67,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -24,13 +24,13 @@
       "name": "Agros",
       "latitude": 34.914875,
       "longitude": 33.0156667,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.6,
-        "humidity": 95.0,
-        "wind": 4.44,
+        "temperature": 18.6,
+        "humidity": 48.0,
+        "wind": 5.19,
         "rain": 0.0,
-        "solar": 38.0,
+        "solar": 821.0,
         "pressure": null
       }
     },
@@ -39,11 +39,11 @@
       "name": "Akamas",
       "latitude": 35.025974,
       "longitude": 32.328942,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 16.4,
-        "humidity": 70.0,
-        "wind": 16.3,
+        "temperature": 21.3,
+        "humidity": 53.0,
+        "wind": 15.56,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -54,10 +54,10 @@
       "name": "Alonoudi",
       "latitude": 34.9294861,
       "longitude": 32.7012028,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.7,
-        "humidity": 97.0,
+        "temperature": 22.5,
+        "humidity": 47.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -69,14 +69,14 @@
       "name": "Amargeti",
       "latitude": 34.826117,
       "longitude": 32.588903,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.4,
-        "humidity": 67.0,
-        "wind": 3.33,
+        "temperature": 20.0,
+        "humidity": 51.0,
+        "wind": 11.48,
         "rain": 0.0,
         "solar": null,
-        "pressure": 966.7
+        "pressure": 966.9
       }
     },
     {
@@ -84,11 +84,11 @@
       "name": "Astromeritis",
       "latitude": 35.1330472,
       "longitude": 33.0220222,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.1,
-        "humidity": 70.0,
-        "wind": 15.74,
+        "temperature": 23.0,
+        "humidity": 42.0,
+        "wind": 12.04,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -99,11 +99,11 @@
       "name": "Athalassa",
       "latitude": 35.140957,
       "longitude": 33.396579,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.6,
-        "humidity": 70.0,
-        "wind": 6.48,
+        "temperature": 23.7,
+        "humidity": 35.0,
+        "wind": 4.82,
         "rain": 0.0,
         "solar": null,
         "pressure": 999.6
@@ -114,11 +114,11 @@
       "name": "Athienou",
       "latitude": 35.0502333,
       "longitude": 33.5423,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.9,
-        "humidity": 69.0,
-        "wind": 15.0,
+        "temperature": 22.9,
+        "humidity": 41.0,
+        "wind": 1.85,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -129,13 +129,13 @@
       "name": "Avdimou",
       "latitude": 34.6843722,
       "longitude": 32.7573694,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.2,
-        "humidity": 97.0,
-        "wind": 2.78,
+        "temperature": 24.2,
+        "humidity": 46.0,
+        "wind": 9.26,
         "rain": 0.0,
-        "solar": 21.0,
+        "solar": 748.0,
         "pressure": null
       }
     },
@@ -144,14 +144,14 @@
       "name": "Cavo Greco",
       "latitude": 34.971012,
       "longitude": 34.070785,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 16.9,
-        "humidity": 64.0,
-        "wind": 10.0,
+        "temperature": 24.1,
+        "humidity": 45.0,
+        "wind": 14.26,
         "rain": 0.0,
         "solar": null,
-        "pressure": 1011.0
+        "pressure": 1011.4
       }
     },
     {
@@ -159,11 +159,11 @@
       "name": "Chromio",
       "latitude": 34.9429611,
       "longitude": 32.8655306,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 5.8,
-        "humidity": 14.0,
-        "wind": 10.93,
+        "temperature": 9.6,
+        "humidity": 75.0,
+        "wind": 7.22,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -174,14 +174,14 @@
       "name": "Cytasat",
       "latitude": 34.861263,
       "longitude": 33.382527,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 10.9,
-        "humidity": 80.0,
-        "wind": 1.85,
+        "temperature": 24.1,
+        "humidity": 41.0,
+        "wind": 5.0,
         "rain": 0.0,
         "solar": null,
-        "pressure": 992.4
+        "pressure": 992.3
       }
     },
     {
@@ -189,11 +189,11 @@
       "name": "Eptagoneia",
       "latitude": 34.8472556,
       "longitude": 33.1433722,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.5,
-        "humidity": 94.0,
-        "wind": 3.52,
+        "temperature": 23.0,
+        "humidity": 36.0,
+        "wind": 5.19,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -204,10 +204,10 @@
       "name": "Faneromeni",
       "latitude": 34.9116,
       "longitude": 33.6300556,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.4,
-        "humidity": 76.0,
+        "temperature": 24.6,
+        "humidity": 49.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -219,13 +219,13 @@
       "name": "Farmakas",
       "latitude": 34.9209389,
       "longitude": 33.1342389,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.2,
-        "humidity": 90.0,
-        "wind": 4.44,
+        "temperature": 18.7,
+        "humidity": 54.0,
+        "wind": 11.85,
         "rain": 0.0,
-        "solar": 0.0,
+        "solar": 271.0,
         "pressure": null
       }
     },
@@ -234,14 +234,14 @@
       "name": "Frenaros",
       "latitude": 35.0424,
       "longitude": 33.917615,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.2,
-        "humidity": 74.0,
-        "wind": 8.15,
+        "temperature": 23.4,
+        "humidity": 46.0,
+        "wind": 4.26,
         "rain": 0.0,
-        "solar": 57.0,
-        "pressure": 1008.0
+        "solar": 166.0,
+        "pressure": 1008.2
       }
     },
     {
@@ -249,10 +249,10 @@
       "name": "Kalavasos",
       "latitude": 34.8044694,
       "longitude": 33.263475,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.2,
-        "humidity": 73.0,
+        "temperature": 24.9,
+        "humidity": 40.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -264,13 +264,13 @@
       "name": "Kalopanayiotis",
       "latitude": 35.0053389,
       "longitude": 32.8262694,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 7.9,
-        "humidity": 74.0,
-        "wind": 9.07,
+        "temperature": 21.7,
+        "humidity": 48.0,
+        "wind": 12.22,
         "rain": 0.0,
-        "solar": 0.0,
+        "solar": 802.0,
         "pressure": null
       }
     },
@@ -279,13 +279,13 @@
       "name": "Kampos",
       "latitude": 35.072153,
       "longitude": 32.774028,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.5,
-        "humidity": 64.0,
-        "wind": 4.44,
+        "temperature": 19.6,
+        "humidity": 55.0,
+        "wind": 3.33,
         "rain": 0.0,
-        "solar": 33.0,
+        "solar": 336.0,
         "pressure": null
       }
     },
@@ -294,11 +294,11 @@
       "name": "Kannaviou",
       "latitude": 34.9297861,
       "longitude": 32.5859667,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 11.4,
-        "humidity": 86.0,
-        "wind": 15.12,
+        "temperature": 18.8,
+        "humidity": 57.0,
+        "wind": 6.48,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -309,10 +309,10 @@
       "name": "Kathikas",
       "latitude": 34.9140972,
       "longitude": 32.4123139,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.8,
-        "humidity": 76.0,
+        "temperature": 18.0,
+        "humidity": 61.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -324,7 +324,7 @@
       "name": "Kepnic",
       "latitude": 35.1523889,
       "longitude": 33.3122806,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
         "temperature": null,
         "humidity": null,
@@ -339,13 +339,13 @@
       "name": "Kilani",
       "latitude": 34.843888,
       "longitude": 32.844472,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 10.6,
-        "humidity": 86.0,
-        "wind": 3.6,
+        "temperature": 18.8,
+        "humidity": 53.0,
+        "wind": 8.28,
         "rain": 0.0,
-        "solar": 80.0,
+        "solar": 842.0,
         "pressure": null
       }
     },
@@ -354,10 +354,10 @@
       "name": "Kornos",
       "latitude": 34.913122,
       "longitude": 33.402211,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.9,
-        "humidity": 74.0,
+        "temperature": 21.7,
+        "humidity": 47.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -369,11 +369,11 @@
       "name": "Kouris",
       "latitude": 34.7229111,
       "longitude": 32.9224361,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.6,
-        "humidity": 68.0,
-        "wind": 20.37,
+        "temperature": 23.3,
+        "humidity": 50.0,
+        "wind": 15.74,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -384,11 +384,11 @@
       "name": "Kpyrgos",
       "latitude": 35.1815639,
       "longitude": 32.6870972,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.4,
-        "humidity": 72.0,
-        "wind": 7.04,
+        "temperature": 22.7,
+        "humidity": 48.0,
+        "wind": 11.67,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -399,13 +399,13 @@
       "name": "Kyperounta",
       "latitude": 34.9491667,
       "longitude": 32.9825,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 7.9,
-        "humidity": 96.0,
-        "wind": 0.36,
+        "temperature": 15.0,
+        "humidity": 59.0,
+        "wind": 6.12,
         "rain": null,
-        "solar": 62.0,
+        "solar": 343.0,
         "pressure": null
       }
     },
@@ -414,11 +414,26 @@
       "name": "Lclk",
       "latitude": 34.873476,
       "longitude": 33.617338,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.3,
-        "humidity": 69.0,
-        "wind": 3.24,
+        "temperature": 24.4,
+        "humidity": 45.0,
+        "wind": 9.72,
+        "rain": 0.0,
+        "solar": null,
+        "pressure": null
+      }
+    },
+    {
+      "id": "LCPH",
+      "name": "Lcph",
+      "latitude": 34.715442,
+      "longitude": 32.479072,
+      "observed_at": "2026-10-19 13:10 (Local Time)",
+      "readings": {
+        "temperature": 23.4,
+        "humidity": 45.0,
+        "wind": 13.32,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -429,11 +444,11 @@
       "name": "Lefkara",
       "latitude": 34.895842,
       "longitude": 33.292878,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 11.2,
-        "humidity": 78.0,
-        "wind": 8.64,
+        "temperature": 22.3,
+        "humidity": 43.0,
+        "wind": 1.8,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -444,11 +459,11 @@
       "name": "Lefkosia",
       "latitude": 35.1643667,
       "longitude": 33.3560722,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 11.2,
-        "humidity": 84.0,
-        "wind": 0.0,
+        "temperature": 23.9,
+        "humidity": 37.0,
+        "wind": 2.16,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -459,14 +474,14 @@
       "name": "Limassol",
       "latitude": 34.645719,
       "longitude": 33.003984,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.1,
-        "humidity": 73.0,
-        "wind": 4.68,
+        "temperature": 23.0,
+        "humidity": 47.0,
+        "wind": 11.16,
         "rain": 0.0,
-        "solar": 60.0,
-        "pressure": 1017.6
+        "solar": 739.0,
+        "pressure": 1017.5
       }
     },
     {
@@ -474,14 +489,14 @@
       "name": "Linou",
       "latitude": 35.067777,
       "longitude": 32.898208,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.5,
-        "humidity": 60.0,
-        "wind": 15.93,
+        "temperature": 22.0,
+        "humidity": 51.0,
+        "wind": 18.89,
         "rain": 0.0,
         "solar": null,
-        "pressure": 970.9
+        "pressure": 971.3
       }
     },
     {
@@ -489,11 +504,11 @@
       "name": "Lysos",
       "latitude": 35.011868,
       "longitude": 32.528019,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 11.7,
-        "humidity": 77.0,
-        "wind": 5.0,
+        "temperature": 17.4,
+        "humidity": 62.0,
+        "wind": 1.85,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -504,13 +519,13 @@
       "name": "Mallia",
       "latitude": 34.8158556,
       "longitude": 32.785175,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 10.2,
-        "humidity": 89.0,
-        "wind": 3.15,
+        "temperature": 20.1,
+        "humidity": 54.0,
+        "wind": 13.7,
         "rain": 0.0,
-        "solar": 91.0,
+        "solar": 699.0,
         "pressure": null
       }
     },
@@ -519,13 +534,13 @@
       "name": "Mammari",
       "latitude": 35.172358,
       "longitude": 33.2148785,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.8,
-        "humidity": 72.0,
-        "wind": 2.16,
+        "temperature": 23.5,
+        "humidity": 36.0,
+        "wind": 6.48,
         "rain": 0.0,
-        "solar": 69.0,
+        "solar": 750.0,
         "pressure": null
       }
     },
@@ -534,13 +549,13 @@
       "name": "Mathiatis",
       "latitude": 34.9611,
       "longitude": 33.331,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.3,
-        "humidity": 69.0,
-        "wind": 6.11,
+        "temperature": 23.2,
+        "humidity": 41.0,
+        "wind": 5.74,
         "rain": 0.0,
-        "solar": 62.0,
+        "solar": 759.0,
         "pressure": null
       }
     },
@@ -549,10 +564,10 @@
       "name": "Panagia Bridge",
       "latitude": 35.0176028,
       "longitude": 33.0823778,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.0,
-        "humidity": 94.0,
+        "temperature": 21.2,
+        "humidity": 43.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -564,11 +579,11 @@
       "name": "Paphos",
       "latitude": 34.7794306,
       "longitude": 32.4385472,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.8,
-        "humidity": 71.0,
-        "wind": 4.26,
+        "temperature": 22.7,
+        "humidity": 45.0,
+        "wind": 6.67,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -579,11 +594,11 @@
       "name": "Pareklisia",
       "latitude": 34.7388351,
       "longitude": 33.1590222,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.9,
-        "humidity": 82.0,
-        "wind": 2.04,
+        "temperature": 26.3,
+        "humidity": 41.0,
+        "wind": 8.33,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -594,11 +609,11 @@
       "name": "Platania",
       "latitude": 34.9477833,
       "longitude": 32.9258194,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 7.4,
-        "humidity": 90.0,
-        "wind": 1.08,
+        "temperature": 14.0,
+        "humidity": 63.0,
+        "wind": 0.36,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -609,14 +624,14 @@
       "name": "Polis",
       "latitude": 35.04195,
       "longitude": 32.437228,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.0,
-        "humidity": 78.0,
-        "wind": 11.3,
+        "temperature": 23.1,
+        "humidity": 49.0,
+        "wind": 11.11,
         "rain": 0.0,
         "solar": null,
-        "pressure": 1014.9
+        "pressure": 1015.1
       }
     },
     {
@@ -624,11 +639,11 @@
       "name": "Polystypos",
       "latitude": 34.944042,
       "longitude": 33.018864,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 10.1,
-        "humidity": 84.0,
-        "wind": 3.15,
+        "temperature": 15.1,
+        "humidity": 57.0,
+        "wind": 1.85,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -639,13 +654,13 @@
       "name": "Prodromos",
       "latitude": 34.949912,
       "longitude": 32.830595,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 6.2,
-        "humidity": 80.0,
-        "wind": 11.3,
+        "temperature": 11.5,
+        "humidity": 67.0,
+        "wind": 5.37,
         "rain": 0.0,
-        "solar": 0.0,
+        "solar": 233.0,
         "pressure": null
       }
     },
@@ -654,11 +669,11 @@
       "name": "Pyrgos",
       "latitude": 35.1415413,
       "longitude": 32.6163214,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.4,
-        "humidity": 77.0,
-        "wind": 11.67,
+        "temperature": 19.2,
+        "humidity": 60.0,
+        "wind": 20.74,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -669,10 +684,10 @@
       "name": "Saittas",
       "latitude": 34.8632083,
       "longitude": 32.9113833,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 8.8,
-        "humidity": 86.0,
+        "temperature": 21.0,
+        "humidity": 49.0,
         "wind": null,
         "rain": 0.0,
         "solar": null,
@@ -684,11 +699,11 @@
       "name": "Tamasos",
       "latitude": 35.0172889,
       "longitude": 33.249175,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.3,
-        "humidity": 74.0,
-        "wind": 5.19,
+        "temperature": 21.5,
+        "humidity": 43.0,
+        "wind": 1.67,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -699,11 +714,11 @@
       "name": "Tepak",
       "latitude": 34.67696,
       "longitude": 33.037545,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 14.0,
-        "humidity": 73.0,
-        "wind": 5.37,
+        "temperature": 24.8,
+        "humidity": 40.0,
+        "wind": 9.26,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -714,11 +729,11 @@
       "name": "Tripilos",
       "latitude": 34.9893528,
       "longitude": 32.6817639,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 6.8,
-        "humidity": 99.0,
-        "wind": 10.37,
+        "temperature": 13.9,
+        "humidity": 75.0,
+        "wind": 7.04,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -729,14 +744,14 @@
       "name": "Troodos",
       "latitude": 34.924542,
       "longitude": 32.881496,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 7.2,
-        "humidity": 10.0,
-        "wind": 11.11,
+        "temperature": 11.2,
+        "humidity": 70.0,
+        "wind": 5.19,
         "rain": 0.0,
         "solar": null,
-        "pressure": 828.7
+        "pressure": 829.6
       }
     },
     {
@@ -744,11 +759,11 @@
       "name": "Visitor",
       "latitude": 35.144477,
       "longitude": 33.403387,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 11.6,
-        "humidity": 100.0,
-        "wind": 1.11,
+        "temperature": 24.1,
+        "humidity": 36.0,
+        "wind": 2.96,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -759,13 +774,13 @@
       "name": "Xyliatos",
       "latitude": 35.0140917,
       "longitude": 33.0492028,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 12.6,
-        "humidity": 69.0,
-        "wind": 3.89,
+        "temperature": 20.4,
+        "humidity": 44.0,
+        "wind": 4.07,
         "rain": 0.0,
-        "solar": 23.0,
+        "solar": 794.0,
         "pressure": null
       }
     },
@@ -774,11 +789,11 @@
       "name": "Xylophagou",
       "latitude": 34.9778111,
       "longitude": 33.8379889,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 15.4,
-        "humidity": 70.0,
-        "wind": 8.15,
+        "temperature": 23.4,
+        "humidity": 52.0,
+        "wind": 15.56,
         "rain": 0.0,
         "solar": null,
         "pressure": null
@@ -789,11 +804,11 @@
       "name": "Zygi",
       "latitude": 34.741325,
       "longitude": 33.3271,
-      "observed_at": "2026-10-19 07:30 (Local Time)",
+      "observed_at": "2026-10-19 13:10 (Local Time)",
       "readings": {
-        "temperature": 13.2,
-        "humidity": 82.0,
-        "wind": 4.82,
+        "temperature": 24.4,
+        "humidity": 43.0,
+        "wind": 8.7,
         "rain": 0.0,
         "solar": null,
         "pressure": null
